@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/AFXMLParserResponseSerializer.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/AFXMLParserResponseSerializer</TokenIdentifier>
+			<Abstract type="html">AFXMLParserSerializer is a subclass of AFHTTPSerializer that validates and decodes XML responses as an NSXMLParser objects.</Abstract>
+			<DeclaredIn>AFURLResponseSerialization.h</DeclaredIn>
+            
+			
+			<NodeRef refid="18"/>
+		</Token>
+		
+		
+        
+	</File>
+</Tokens>

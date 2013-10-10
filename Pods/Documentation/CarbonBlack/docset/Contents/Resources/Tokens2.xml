@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCBHTTPClient.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCBHTTPClient</TokenIdentifier>
+			<Abstract type="html">The client should be used for all HTTP communication with the Carbon API.</Abstract>
+			<DeclaredIn>CCBHTTPClient.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CCBHTTPClient/sharedClient</TokenIdentifier>
+			<Abstract type="html">an singleton incstance of the network client.  This client should be use for all communication with the Carbon API.</Abstract>
+			<DeclaredIn>CCBHTTPClient.h</DeclaredIn>
+			
+			<Declaration>+ (CCBHTTPClient *)sharedClient</Declaration>
+			
+			<ReturnValue><Abstract type="html">an singleton incstance of the network client.  This client should be use for all communication with the Carbon API.</Abstract></ReturnValue>
+			<Anchor>//api/name/sharedClient</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

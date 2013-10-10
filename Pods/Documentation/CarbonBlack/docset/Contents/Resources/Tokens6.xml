@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CarbonBlack.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CarbonBlack</TokenIdentifier>
+			<Abstract type="html">The primary interface with the Carbon Black SDK</Abstract>
+			<DeclaredIn>CarbonBlack.h</DeclaredIn>
+            
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CarbonBlack/registerWithClientId:andAppId:</TokenIdentifier>
+			<Abstract type="html">Registers the app with Carbon. Call should be made on app launch.</Abstract>
+			<DeclaredIn>CarbonBlack.h</DeclaredIn>
+			
+			<Declaration>+ (void)registerWithClientId:(NSString *)clientId andAppId:(NSString *)appId</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>clientId</Name>
+					<Abstract type="html">The developer&apos;s Carbon ID</Abstract>
+				</Parameter><Parameter>
+					<Name>appId</Name>
+					<Abstract type="html">The application&apos;s ID in the Carbon system.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/registerWithClientId:andAppId:</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CarbonBlack/clientId</TokenIdentifier>
+			<Abstract type="html">The developer ID registered with Carbon</Abstract>
+			<DeclaredIn>CarbonBlack.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)clientId</Declaration>
+			
+			
+			<Anchor>//api/name/clientId</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CarbonBlack/applicationId</TokenIdentifier>
+			<Abstract type="html">The application&apos;s ID registered with Carbon</Abstract>
+			<DeclaredIn>CarbonBlack.h</DeclaredIn>
+			
+			<Declaration>+ (NSString *)applicationId</Declaration>
+			
+			
+			<Anchor>//api/name/applicationId</Anchor>
+            <NodeRef refid="6"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

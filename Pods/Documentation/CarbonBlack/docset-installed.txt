@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/Kevin/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.carbonblack.CarbonBlack-0.0.2.docset
+Time: 2013-10-09 15:37:25 +0000

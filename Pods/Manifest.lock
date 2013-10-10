@@ -1,0 +1,40 @@
+PODS:
+  - AFNetworking (2.0.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.0.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.0.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.0.0)
+  - AFNetworking/Security (2.0.0)
+  - AFNetworking/Serialization (2.0.0)
+  - AFNetworking/UIKit (2.0.0):
+    - AFNetworking/NSURLConnection
+  - CarbonBlack (0.0.2):
+    - AFNetworking (~> 2.0.0)
+    - Lockbox (~> 1.4.3)
+  - Lockbox (1.4.3)
+
+DEPENDENCIES:
+  - CarbonBlack (from `https://github.com/chaione/carbon-black-ios`, branch `vault`)
+
+EXTERNAL SOURCES:
+  CarbonBlack:
+    :branch: vault
+    :git: https://github.com/chaione/carbon-black-ios
+
+SPEC CHECKSUMS:
+  AFNetworking: 3fa983b1beaba69566a3374612511e2a6e3fe845
+  CarbonBlack: bbae85e36ca460e2aae00b99d0f1fc3c2856f8ce
+  Lockbox: 1bcfd564f034b83456fcad5bdd49470a80a38d2b
+
+COCOAPODS: 0.23.0

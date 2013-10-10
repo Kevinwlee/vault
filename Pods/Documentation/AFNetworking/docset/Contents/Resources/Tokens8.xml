@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/AFJSONRequestSerializer.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/AFJSONRequestSerializer</TokenIdentifier>
+			<Abstract type="html">## Throttling Bandwidth for HTTP Request Input Streams</Abstract>
+			<DeclaredIn>AFURLRequestSerialization.h</DeclaredIn>
+            
+			
+			<NodeRef refid="8"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AFJSONRequestSerializer/setFormat:</TokenIdentifier>
+			<Abstract type="html">The property list format. Possible values are described in &quot;NSPropertyListFormat&quot;.</Abstract>
+			<DeclaredIn>AFURLRequestSerialization.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSPropertyListFormat format</Declaration>
+			
+			
+			<Anchor>//api/name/format</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AFJSONRequestSerializer/format</TokenIdentifier>
+			<Abstract type="html">The property list format. Possible values are described in &quot;NSPropertyListFormat&quot;.</Abstract>
+			<DeclaredIn>AFURLRequestSerialization.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSPropertyListFormat format</Declaration>
+			
+			
+			<Anchor>//api/name/format</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/AFJSONRequestSerializer/format</TokenIdentifier>
+			<Abstract type="html">The property list format. Possible values are described in &quot;NSPropertyListFormat&quot;.</Abstract>
+			<DeclaredIn>AFURLRequestSerialization.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSPropertyListFormat format</Declaration>
+			
+			
+			<Anchor>//api/name/format</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AFJSONRequestSerializer/setWritingOptions:</TokenIdentifier>
+			<Abstract type="html">Options for writing the request JSON data from Foundation objects. For possible values, see the NSJSONSerialization documentation section &quot;NSJSONWritingOptions&quot;. 0 by default.</Abstract>
+			<DeclaredIn>AFURLRequestSerialization.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSJSONWritingOptions writingOptions</Declaration>
+			
+			
+			<Anchor>//api/name/writingOptions</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/AFJSONRequestSerializer/writingOptions</TokenIdentifier>
+			<Abstract type="html">Options for writing the request JSON data from Foundation objects. For possible values, see the NSJSONSerialization documentation section &quot;NSJSONWritingOptions&quot;. 0 by default.</Abstract>
+			<DeclaredIn>AFURLRequestSerialization.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSJSONWritingOptions writingOptions</Declaration>
+			
+			
+			<Anchor>//api/name/writingOptions</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/AFJSONRequestSerializer/writingOptions</TokenIdentifier>
+			<Abstract type="html">Options for writing the request JSON data from Foundation objects. For possible values, see the NSJSONSerialization documentation section &quot;NSJSONWritingOptions&quot;. 0 by default.</Abstract>
+			<DeclaredIn>AFURLRequestSerialization.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSJSONWritingOptions writingOptions</Declaration>
+			
+			
+			<Anchor>//api/name/writingOptions</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/AFJSONRequestSerializer/serializerWithWritingOptions:</TokenIdentifier>
+			<Abstract type="html">Creates and returns a JSON serializer with specified reading and writing options.</Abstract>
+			<DeclaredIn>AFURLRequestSerialization.h</DeclaredIn>
+			
+			<Declaration>+ (instancetype)serializerWithWritingOptions:(NSJSONWritingOptions)writingOptions</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>writingOptions</Name>
+					<Abstract type="html">The specified JSON writing options.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/serializerWithWritingOptions:</Anchor>
+            <NodeRef refid="8"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

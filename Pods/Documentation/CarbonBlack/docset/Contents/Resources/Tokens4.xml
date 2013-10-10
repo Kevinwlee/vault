@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCBVaultProxy.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCBVaultProxy</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>CCBVaultProxy.h</DeclaredIn>
+            
+			
+			<NodeRef refid="4"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CCBVaultProxy/sharedProxy</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>CCBVaultProxy.h</DeclaredIn>
+			
+			<Declaration>+ (CCBVaultProxy *)sharedProxy</Declaration>
+			
+			
+			<Anchor>//api/name/sharedProxy</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBVaultProxy/createItem:inContainer:success:failure:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>CCBVaultProxy.h</DeclaredIn>
+			
+			<Declaration>- (void)createItem:(NSDictionary *)item inContainer:(NSString *)containerName success:(void ( ^ ) ( id responseObject ))success failure:(void ( ^ ) ( NSURLSessionDataTask *task , NSError *error ))failure</Declaration>
+			
+			
+			<Anchor>//api/name/createItem:inContainer:success:failure:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBVaultProxy/getItemsInContainer:success:failure:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>CCBVaultProxy.h</DeclaredIn>
+			
+			<Declaration>- (void)getItemsInContainer:(NSString *)containerName success:(void ( ^ ) ( id responseObject ))success failure:(void ( ^ ) ( NSURLSessionDataTask *task , NSError *error ))failure</Declaration>
+			
+			
+			<Anchor>//api/name/getItemsInContainer:success:failure:</Anchor>
+            <NodeRef refid="4"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

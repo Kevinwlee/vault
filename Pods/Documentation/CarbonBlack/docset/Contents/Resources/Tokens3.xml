@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCBTokenRepository.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCBTokenRepository</TokenIdentifier>
+			<Abstract type="html">The Token repository is used to persist an authentication token in the Keychain.</Abstract>
+			<DeclaredIn>CCBTokenRepository.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CCBTokenRepository/sharedRepository</TokenIdentifier>
+			<Abstract type="html">Returns a singleton instance of the token repository.</Abstract>
+			<DeclaredIn>CCBTokenRepository.h</DeclaredIn>
+			
+			<Declaration>+ (CCBTokenRepository *)sharedRepository</Declaration>
+			
+			<ReturnValue><Abstract type="html">a CCBTokenRepository</Abstract></ReturnValue>
+			<Anchor>//api/name/sharedRepository</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBTokenRepository/saveToken:</TokenIdentifier>
+			<Abstract type="html">Saves a the token to the keychain.</Abstract>
+			<DeclaredIn>CCBTokenRepository.h</DeclaredIn>
+			
+			<Declaration>- (void)saveToken:(NSString *)token</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>token</Name>
+					<Abstract type="html">- the token to be persisted.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/saveToken:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBTokenRepository/hasToken</TokenIdentifier>
+			<Abstract type="html">Use this method to verify that a valid token is available.</Abstract>
+			<DeclaredIn>CCBTokenRepository.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)hasToken</Declaration>
+			
+			
+			<Anchor>//api/name/hasToken</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBTokenRepository/token</TokenIdentifier>
+			<Abstract type="html">Used to access the token that has been persisted.</Abstract>
+			<DeclaredIn>CCBTokenRepository.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)token</Declaration>
+			
+			<ReturnValue><Abstract type="html">the token that is saved in the keychain.  The will return nil if the token doesn&apos;t exist.</Abstract></ReturnValue>
+			<Anchor>//api/name/token</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBTokenRepository/deleteToken</TokenIdentifier>
+			<Abstract type="html">Use to delete the persisted access token.</Abstract>
+			<DeclaredIn>CCBTokenRepository.h</DeclaredIn>
+			
+			<Declaration>- (void)deleteToken</Declaration>
+			
+			
+			<Anchor>//api/name/deleteToken</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

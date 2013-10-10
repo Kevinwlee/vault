@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/Kevin/Library/Developer/Shared/Documentation/DocSets/org.cocoapods.lockbox.Lockbox-1.4.3.docset
+Time: 2013-10-09 15:37:29 +0000

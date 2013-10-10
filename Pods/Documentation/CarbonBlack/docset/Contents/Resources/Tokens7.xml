@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/CCBCarbonVaultErrorCode.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/CCBCarbonVaultErrorCode</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>CCBVaultService.h</DeclaredIn>
+            
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+        
+        <Token>
+            <TokenIdentifier>//apple_ref/c/econst/CCBMissingContainerCode</TokenIdentifier>
+            <Abstract type="html"></Abstract>
+            <Declaration>CCBMissingContainerCode</Declaration>
+            
+            <DeclaredIn>CCBVaultService.h</DeclaredIn>
+            
+            <NodeRef refid="7"/>
+        </Token>
+        
+	</File>
+</Tokens>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/AFURLResponseSerialization.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/AFURLResponseSerialization</TokenIdentifier>
+			<Abstract type="html">The AFURLResponseSerialization protocol is adopted by an object that decodes data into a more useful object representation, according to details in the server response. Response serializers may additionally perform validation on the incoming response and data.</Abstract>
+			<DeclaredIn>AFURLResponseSerialization.h</DeclaredIn>
+            
+			
+			<NodeRef refid="27"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/AFURLResponseSerialization/responseObjectForResponse:data:error:</TokenIdentifier>
+			<Abstract type="html">The response object decoded from the data associated with a specified response.</Abstract>
+			<DeclaredIn>AFURLResponseSerialization.h</DeclaredIn>
+			
+			<Declaration>- (id)responseObjectForResponse:(NSURLResponse *)response data:(NSData *)data error:(NSError *__autoreleasing *)error</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>response</Name>
+					<Abstract type="html">The response to be processed.</Abstract>
+				</Parameter><Parameter>
+					<Name>data</Name>
+					<Abstract type="html">The response data to be decoded.</Abstract>
+				</Parameter><Parameter>
+					<Name>error</Name>
+					<Abstract type="html">The error that occurred while attempting to decode the response data.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">The object decoded from the specified response data.</Abstract></ReturnValue>
+			<Anchor>//api/name/responseObjectForResponse:data:error:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

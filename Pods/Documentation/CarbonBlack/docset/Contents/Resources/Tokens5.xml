@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCBVaultService.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCBVaultService</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>CCBVaultService.h</DeclaredIn>
+            
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBVaultService/setVaultProxy:</TokenIdentifier>
+			<Abstract type="html">The vault proxy is used to proxy calls to the Carbon API</Abstract>
+			<DeclaredIn>CCBVaultService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) CCBVaultProxy *vaultProxy</Declaration>
+			
+			
+			<Anchor>//api/name/vaultProxy</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBVaultService/vaultProxy</TokenIdentifier>
+			<Abstract type="html">The vault proxy is used to proxy calls to the Carbon API</Abstract>
+			<DeclaredIn>CCBVaultService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) CCBVaultProxy *vaultProxy</Declaration>
+			
+			
+			<Anchor>//api/name/vaultProxy</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/CCBVaultService/vaultProxy</TokenIdentifier>
+			<Abstract type="html">The vault proxy is used to proxy calls to the Carbon API</Abstract>
+			<DeclaredIn>CCBVaultService.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) CCBVaultProxy *vaultProxy</Declaration>
+			
+			
+			<Anchor>//api/name/vaultProxy</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CCBVaultService/sharedService</TokenIdentifier>
+			<Abstract type="html">The shared CCBVaultSerivce should be used to persist data to the Carbon Vault API.  This class provides methods for creating data in containers.  You can think of a container as a buck for common data.
+Once you persist data, you can retrieve it by id.  You can also retrieve all data in a specific container, and you can get a listing of all your containers.</Abstract>
+			<DeclaredIn>CCBVaultService.h</DeclaredIn>
+			
+			<Declaration>+ (CCBVaultService *)sharedService</Declaration>
+			
+			<ReturnValue><Abstract type="html">the static shared instance of the the Vault Service</Abstract></ReturnValue>
+			<Anchor>//api/name/sharedService</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBVaultService/createItem:inContainer:completion:</TokenIdentifier>
+			<Abstract type="html">If you need to store data in the Carbon Vault, you will create the data in a container.</Abstract>
+			<DeclaredIn>CCBVaultService.h</DeclaredIn>
+			
+			<Declaration>- (void)createItem:(NSDictionary *)item inContainer:(NSString *)containerName completion:(vaultCompletionBlock)completionBlock</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>item</Name>
+					<Abstract type="html">= the NSDictionary representation of the item you want to persist</Abstract>
+				</Parameter><Parameter>
+					<Name>containerName</Name>
+					<Abstract type="html">is the name of the container that will be used to store similar data</Abstract>
+				</Parameter><Parameter>
+					<Name>completionBlock</Name>
+					<Abstract type="html">is executed after the create operation has completed on the server.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/createItem:inContainer:completion:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBVaultService/getItem:completion:</TokenIdentifier>
+			<Abstract type="html">not implemented</Abstract>
+			<DeclaredIn>CCBVaultService.h</DeclaredIn>
+			
+			<Declaration>- (void)getItem:(NSDictionary *)item completion:(vaultCompletionBlock)completionBlock</Declaration>
+			
+			
+			<Anchor>//api/name/getItem:completion:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBVaultService/getItemsInContainerinContainer:completion:</TokenIdentifier>
+			<Abstract type="html">not implemented</Abstract>
+			<DeclaredIn>CCBVaultService.h</DeclaredIn>
+			
+			<Declaration>- (void)getItemsInContainerinContainer:(NSString *)containerName completion:(vaultListingCompletionBlock)completionBlock</Declaration>
+			
+			
+			<Anchor>//api/name/getItemsInContainerinContainer:completion:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBVaultService/getContainersWithCompletion:</TokenIdentifier>
+			<Abstract type="html">not implemented</Abstract>
+			<DeclaredIn>CCBVaultService.h</DeclaredIn>
+			
+			<Declaration>- (void)getContainersWithCompletion:(vaultListingCompletionBlock)completionBlock</Declaration>
+			
+			
+			<Anchor>//api/name/getContainersWithCompletion:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBVaultService/executeCompletionBlock:withCarbonResponse:error:</TokenIdentifier>
+			<Abstract type="html">not implemented</Abstract>
+			<DeclaredIn>CCBVaultService.h</DeclaredIn>
+			
+			<Declaration>- (void)executeCompletionBlock:(vaultCompletionBlock)block withCarbonResponse:(NSDictionary *)carbonResponse error:(NSError *)error</Declaration>
+			
+			
+			<Anchor>//api/name/executeCompletionBlock:withCarbonResponse:error:</Anchor>
+            <NodeRef refid="5"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

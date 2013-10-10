@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/CCBDefaultsRepository.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/CCBDefaultsRepository</TokenIdentifier>
+			<Abstract type="html">The defaults repository should be used to store information to the NSUserDefaults.</Abstract>
+			<DeclaredIn>CCBDefaultsRepository.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/CCBDefaultsRepository/sharedRepository</TokenIdentifier>
+			<Abstract type="html">returns a singleton instance of the CCBDefaultsRepository</Abstract>
+			<DeclaredIn>CCBDefaultsRepository.h</DeclaredIn>
+			
+			<Declaration>+ (CCBDefaultsRepository *)sharedRepository</Declaration>
+			
+			<ReturnValue><Abstract type="html">CCBDefaults - singleton instance.</Abstract></ReturnValue>
+			<Anchor>//api/name/sharedRepository</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBDefaultsRepository/saveCompanyId:</TokenIdentifier>
+			<Abstract type="html">Use save company id to perist the company id to user defaults.
+This method uses NSUserDefaults to persist the string, and calls syncronize on NSUserDefaults.</Abstract>
+			<DeclaredIn>CCBDefaultsRepository.h</DeclaredIn>
+			
+			<Declaration>- (void)saveCompanyId:(NSString *)companyId</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>companyId</Name>
+					<Abstract type="html">- is epxected to be a non empty NSString.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/saveCompanyId:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBDefaultsRepository/companyId</TokenIdentifier>
+			<Abstract type="html">Use this mehtod to retrieve the company_id from the repository.</Abstract>
+			<DeclaredIn>CCBDefaultsRepository.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)companyId</Declaration>
+			
+			<ReturnValue><Abstract type="html">the company id that was saved.  This method will return nil of the company id does not exist.</Abstract></ReturnValue>
+			<Anchor>//api/name/companyId</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/CCBDefaultsRepository/hasCompanyId</TokenIdentifier>
+			<Abstract type="html">Use this method To determine if a valid compnay id exists.</Abstract>
+			<DeclaredIn>CCBDefaultsRepository.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)hasCompanyId</Declaration>
+			
+			<ReturnValue><Abstract type="html">YES if a non nil, non NSNull, non empty string exists.</Abstract></ReturnValue>
+			<Anchor>//api/name/hasCompanyId</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>
