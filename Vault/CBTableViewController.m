@@ -9,7 +9,7 @@
 #import "CBTableViewController.h"
 
 @interface CBTableViewController ()
-@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) NSMutableArray *items;
 @end
 
 @implementation CBTableViewController
@@ -32,7 +32,7 @@
 - (void)refresh {
     CCBVaultProxy *proxy = [CCBVaultProxy sharedProxy];
     [proxy getItemsInContainer:@"inventory" success:^(id responseObject) {
-        self.items = responseObject;
+        self.items = [NSMutableArray arrayWithArray:responseObject];
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"Error %@", error);
@@ -71,8 +71,20 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (editingStyle) {
+        case UITableViewCellEditingStyleDelete:
+            [self.items removeObjectAtIndex:indexPath.row];
+            [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            
+            NSLog(@"Delete the row");
+            break;
+        default:
+            break;
+    }
+    
+}
 
-/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -80,8 +92,11 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSDictionary *selectedItem = [self itemAtIndexPath:[self.tableView indexPathForSelectedRow]];
+    CBEditViewController *vc = (CBEditViewController*)segue.destinationViewController;
+    vc.item = selectedItem;
 }
 
- */
+
 
 @end

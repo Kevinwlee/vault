@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CCBVaultProxy.h"
+#import "CBEditViewController.h"
 
 @interface CBTableViewController : UITableViewController
 

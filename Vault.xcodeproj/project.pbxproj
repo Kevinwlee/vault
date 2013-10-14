@@ -23,6 +23,7 @@
 		0AD1C8431805AA6B001AFE09 /* VaultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1C8421805AA6B001AFE09 /* VaultTests.m */; };
 		0AD1C84E1805B070001AFE09 /* CCBAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1C84D1805B070001AFE09 /* CCBAddItemViewController.m */; };
 		3DC15F9A180C90100009CFE6 /* CBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC15F99180C90100009CFE6 /* CBTableViewController.m */; };
+		3DC15F9D180C975E0009CFE6 /* CBEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC15F9C180C975E0009CFE6 /* CBEditViewController.m */; };
 		F4DDA2F6ADE74A9EAC981451 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A94BD0C48BCE4317B22D36D8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,8 @@
 		16FD9BA084F74B25BFF5F907 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		3DC15F98180C90100009CFE6 /* CBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTableViewController.h; sourceTree = "<group>"; };
 		3DC15F99180C90100009CFE6 /* CBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTableViewController.m; sourceTree = "<group>"; };
+		3DC15F9B180C975E0009CFE6 /* CBEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEditViewController.h; sourceTree = "<group>"; };
+		3DC15F9C180C975E0009CFE6 /* CBEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEditViewController.m; sourceTree = "<group>"; };
 		A94BD0C48BCE4317B22D36D8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -135,6 +138,8 @@
 				0AD1C84D1805B070001AFE09 /* CCBAddItemViewController.m */,
 				3DC15F98180C90100009CFE6 /* CBTableViewController.h */,
 				3DC15F99180C90100009CFE6 /* CBTableViewController.m */,
+				3DC15F9B180C975E0009CFE6 /* CBEditViewController.h */,
+				3DC15F9C180C975E0009CFE6 /* CBEditViewController.m */,
 			);
 			path = Vault;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AD1C84E1805B070001AFE09 /* CCBAddItemViewController.m in Sources */,
+				3DC15F9D180C975E0009CFE6 /* CBEditViewController.m in Sources */,
 				0AD1C8241805AA6A001AFE09 /* main.m in Sources */,
 				0AD1C8281805AA6A001AFE09 /* CBAppDelegate.m in Sources */,
 				3DC15F9A180C90100009CFE6 /* CBTableViewController.m in Sources */,
