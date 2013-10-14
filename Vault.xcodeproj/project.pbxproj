@@ -22,6 +22,7 @@
 		0AD1C8411805AA6B001AFE09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AD1C83F1805AA6B001AFE09 /* InfoPlist.strings */; };
 		0AD1C8431805AA6B001AFE09 /* VaultTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1C8421805AA6B001AFE09 /* VaultTests.m */; };
 		0AD1C84E1805B070001AFE09 /* CCBAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1C84D1805B070001AFE09 /* CCBAddItemViewController.m */; };
+		3DC15F9A180C90100009CFE6 /* CBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC15F99180C90100009CFE6 /* CBTableViewController.m */; };
 		F4DDA2F6ADE74A9EAC981451 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A94BD0C48BCE4317B22D36D8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,8 @@
 		0AD1C84C1805B070001AFE09 /* CCBAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCBAddItemViewController.h; sourceTree = "<group>"; };
 		0AD1C84D1805B070001AFE09 /* CCBAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCBAddItemViewController.m; sourceTree = "<group>"; };
 		16FD9BA084F74B25BFF5F907 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		3DC15F98180C90100009CFE6 /* CBTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBTableViewController.h; sourceTree = "<group>"; };
+		3DC15F99180C90100009CFE6 /* CBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTableViewController.m; sourceTree = "<group>"; };
 		A94BD0C48BCE4317B22D36D8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,6 +133,8 @@
 				0AD1C81E1805AA6A001AFE09 /* Supporting Files */,
 				0AD1C84C1805B070001AFE09 /* CCBAddItemViewController.h */,
 				0AD1C84D1805B070001AFE09 /* CCBAddItemViewController.m */,
+				3DC15F98180C90100009CFE6 /* CBTableViewController.h */,
+				3DC15F99180C90100009CFE6 /* CBTableViewController.m */,
 			);
 			path = Vault;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				0AD1C84E1805B070001AFE09 /* CCBAddItemViewController.m in Sources */,
 				0AD1C8241805AA6A001AFE09 /* main.m in Sources */,
 				0AD1C8281805AA6A001AFE09 /* CBAppDelegate.m in Sources */,
+				3DC15F9A180C90100009CFE6 /* CBTableViewController.m in Sources */,
 				0AD1C82E1805AA6A001AFE09 /* CBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

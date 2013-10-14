@@ -37,9 +37,40 @@
     } failure:failure];
 }
 
+
 - (void)getItemsInContainer:(NSString *)containerName
                     success:(void(^)(id responseObject))success
                     failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure {
 
+    CCBHTTPClient *client = [CCBHTTPClient sharedClient];
+    NSString *path = [NSString stringWithFormat:@"vault/data/%@.json",containerName];
+    [client GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        success(responseObject);
+    } failure:failure];
 }
+
+
+- (void)getItemWithId:(NSString *)vault_id inContainer:(NSString *)containerName
+                    success:(void(^)(id responseObject))success
+                    failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure {
+    
+    CCBHTTPClient *client = [CCBHTTPClient sharedClient];
+    NSString *path = [NSString stringWithFormat:@"vault/data/%@/%@",containerName, vault_id];
+    [client GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        success(responseObject);
+    } failure:failure];
+}
+
+- (void)deleteItemWithId:(NSString *)vault_id inContainer:(NSString *)containerName
+              success:(void(^)(id responseObject))success
+              failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure {
+    
+}
+
+- (void)putItem:(NSDictionary *)item inContainer:(NSString *)containerName
+                 success:(void(^)(id responseObject))success
+                 failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure {
+}
+
+
 @end

@@ -21,4 +21,17 @@
 - (void)getItemsInContainer:(NSString *)containerName
                     success:(void(^)(id responseObject))success
                     failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure;
+
+- (void)getItemWithId:(NSString *)vault_id inContainer:(NSString *)containerName
+              success:(void(^)(id responseObject))success
+              failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure;
+
+- (void)deleteItemWithId:(NSString *)vault_id inContainer:(NSString *)containerName
+                 success:(void(^)(id responseObject))success
+                 failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure;
+
+- (void)putItem:(NSDictionary *)item inContainer:(NSString *)containerName
+        success:(void(^)(id responseObject))success
+        failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure;
+
 @end
