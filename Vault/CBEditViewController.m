@@ -43,8 +43,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)saveTapped:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
+    
+    NSMutableDictionary *edit = [NSMutableDictionary dictionaryWithDictionary:self.item];
+
+    NSMutableDictionary *data = [NSMutableDictionary dictionaryWithDictionary:[edit objectForKey:@"custom_data"]];
+    [data setValue:self.itemTextField.text forKeyPath:@"item"];
+    [data setValue:self.countTextField.text forKeyPath:@"count"];
+    [edit setObject:data forKey:@"custom_data"];
+    NSLog(@"Item %@", edit);
+    CCBVaultProxy *proxy = [CCBVaultProxy sharedProxy];
+    [proxy putItem:edit inContainer:@"inventory" success:^(id responseObject) {
+      [self.navigationController popViewControllerAnimated:YES];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"Failed %@", error);
+    }];
+
 }
 
 @end

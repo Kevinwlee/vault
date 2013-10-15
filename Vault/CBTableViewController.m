@@ -26,6 +26,11 @@
     [super viewDidLoad];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     [self refresh];
 }
 
@@ -49,6 +54,16 @@
     return [self.items objectAtIndex:indexPath.row];
 }
 
+- (void)deleteItem:(NSDictionary *)item {
+    CCBVaultProxy *proxy = [CCBVaultProxy sharedProxy];
+    NSString *vault_id = [item objectForKey:@"id"];
+    NSLog(@"id %@", vault_id);
+    [proxy deleteItemWithId:vault_id inContainer:@"inventory" success:^(id responseObject) {
+        NSLog(@"Deleted");
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"Delete FAILED");
+    }];
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -73,11 +88,14 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (editingStyle) {
-        case UITableViewCellEditingStyleDelete:
+        case UITableViewCellEditingStyleDelete: {
+            NSDictionary *i = [self itemAtIndexPath:indexPath];
+            [self deleteItem:i];
             [self.items removeObjectAtIndex:indexPath.row];
             [self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
             
             NSLog(@"Delete the row");
+        }
             break;
         default:
             break;

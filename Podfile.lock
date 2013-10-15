@@ -37,4 +37,4 @@ SPEC CHECKSUMS:
   CarbonBlack: bbae85e36ca460e2aae00b99d0f1fc3c2856f8ce
   Lockbox: 1bcfd564f034b83456fcad5bdd49470a80a38d2b
 
-COCOAPODS: 0.23.0
+COCOAPODS: 0.19.1

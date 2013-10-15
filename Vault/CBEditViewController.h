@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CCBVaultProxy.h"
 
 @interface CBEditViewController : UIViewController
 @property (nonatomic, strong) NSDictionary *item;

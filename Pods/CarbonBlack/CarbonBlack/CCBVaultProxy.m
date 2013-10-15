@@ -65,11 +65,26 @@
               success:(void(^)(id responseObject))success
               failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure {
     
+    NSString *path = [NSString stringWithFormat:@"vault/data/%@/%@",containerName, vault_id];
+    CCBHTTPClient *client = [CCBHTTPClient sharedClient];
+    [client DELETE:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"Response after DELETE %@", responseObject);
+        success(responseObject);
+    } failure:failure];
 }
 
 - (void)putItem:(NSDictionary *)item inContainer:(NSString *)containerName
                  success:(void(^)(id responseObject))success
                  failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure {
+    
+    NSDictionary *paramData = @{@"data":item};
+    NSString *vault_id = [item objectForKey:@"id"];
+    NSString *path = [NSString stringWithFormat:@"vault/data/%@/%@", containerName, vault_id];
+    CCBHTTPClient *client = [CCBHTTPClient sharedClient];
+    [client PUT:path parameters:paramData success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"response after PUT %@", responseObject);
+        success(responseObject);
+    } failure:failure];
 }
 
 
