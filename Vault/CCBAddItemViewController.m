@@ -40,15 +40,21 @@
     NSString *item = self.itemTextField.text;
     NSString *count = self.countTextField.text;
     
-    CCBVaultProxy *proxy = [CCBVaultProxy sharedProxy];
+    CCBVaultService *svc = [CCBVaultService sharedService];
     
     NSDictionary *data = @{@"item":item, @"count":count};
     
-    [proxy createItem:data inContainer:@"inventory" success:^(id responseObject) {
-        NSLog(@"responseObject %@", responseObject);
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"That didn't work! :(");
+    [svc createItem:data inContainer:@"inventory" completion:^(NSDictionary *carbonResponse, NSError *error) {
+        if (error) {
+            NSLog(@"Item was not created");
+            return;
+        } else {
+            NSLog(@"Item added");
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+        
     }];
+    
 }
 
 @end

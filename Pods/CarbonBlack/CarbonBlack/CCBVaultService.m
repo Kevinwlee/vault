@@ -32,31 +32,66 @@
     
     [self.vaultProxy createItem:item inContainer:containerName success:^(id responseObject) {
 
-        [self executeCompletionBlock:completionBlock withCarbonResponse:responseObject  error:nil];
+        [self executeVaultCompletionBlock:completionBlock withCarbonResponse:responseObject  error:nil];
 
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
      
-        [self executeCompletionBlock:completionBlock withCarbonResponse:nil error:error];
+        [self executeVaultCompletionBlock:completionBlock withCarbonResponse:nil error:error];
      
     }];
 }
 
-- (void)executeCompletionBlock:(vaultCompletionBlock)block withCarbonResponse:(NSDictionary *)carbonResponse error:(NSError *)error {
+
+- (void)getItem:(NSDictionary *)item completion:(vaultCompletionBlock)completionBlock {
+    
+    NSString *vaultId = [item objectForKey:@"id"];
+    if (!vaultId) {
+        [NSException raise:NSInvalidArgumentException format:@"the item must have the vault id"];
+    }
+
+    NSString *container = [item objectForKey:@"container"];
+    if (!container) {
+        [NSException raise:NSInvalidArgumentException format:@"the item must have the container name"];
+    }
+    CCBVaultProxy *proxy = [self vaultProxy];
+    [proxy getItemWithId:vaultId inContainer:container success:^(id responseObject) {
+        [self executeVaultCompletionBlock:completionBlock withCarbonResponse:responseObject error:nil];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self executeVaultCompletionBlock:completionBlock withCarbonResponse:nil error:error];
+    }];
+}
+
+- (void)getItemsInContainerinContainer:(NSString *)containerName completion:(vaultListingCompletionBlock)completionBlock {
+
+    if (!containerName) {
+        [NSException raise:NSInvalidArgumentException format:@"Container name cannot be nil"];
+    }
+    
+    CCBVaultProxy *proxy = [self vaultProxy];
+    [proxy getItemsInContainer:containerName success:^(id responseObject) {
+        completionBlock(responseObject, nil);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        completionBlock (nil, error);
+    }];
+
+}
+
+//- (void)getContainersWithCompletion:(vaultListingCompletionBlock)completionBlock {
+//    [NSException raise:@"Not Implemented" format:@"Not implemented."];
+//}
+
+- (void)executeVaultCompletionBlock:(vaultCompletionBlock)block withCarbonResponse:(NSDictionary *)carbonResponse error:(NSError *)error {
     if (block) {
         block(carbonResponse, error);
     }
 }
 
-- (void)getItem:(NSDictionary *)item completion:(vaultCompletionBlock)completionBlock {
-    [NSException raise:@"Not Implemented" format:@"Not implemented."];
-}
-
-- (void)getItemsInContainerinContainer:(NSString *)containerName completion:(vaultListingCompletionBlock)completionBlock {
-    [NSException raise:@"Not Implemented" format:@"Not implemented."];
-}
-
-- (void)getContainersWithCompletion:(vaultListingCompletionBlock)completionBlock {
-    [NSException raise:@"Not Implemented" format:@"Not implemented."];
+- (void)executeVaultListingCompletionBlock:(vaultListingCompletionBlock)block
+                        withCarbonResponse:(NSArray *)carbonResponse
+                                     error:(NSError *)error {
+    if (block) {
+        block(carbonResponse, error);
+    }
 }
 
 #pragma mark - overrides for injection
@@ -67,5 +102,6 @@
     }
     return _vaultProxy;
 }
+
 
 @end

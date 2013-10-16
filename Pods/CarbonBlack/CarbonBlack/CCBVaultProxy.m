@@ -30,10 +30,7 @@
     NSDictionary *paramData = @{@"data":item};
     NSString *path = [NSString stringWithFormat:@"vault/data/%@.json",containerName];
     [client POST:path parameters:paramData success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSMutableDictionary *itemDictionary = [NSMutableDictionary dictionaryWithDictionary:[responseObject objectForKey:@"custom_data"]];
-        [itemDictionary setObject:[responseObject valueForKey:@"container"] forKey:@"vault_container"];
-        [itemDictionary setObject:[responseObject valueForKey:@"id"] forKey:@"vault_id"];
-        success(itemDictionary);
+        success(responseObject);
     } failure:failure];
 }
 
@@ -50,25 +47,24 @@
 }
 
 
-- (void)getItemWithId:(NSString *)vault_id inContainer:(NSString *)containerName
+- (void)getItemWithId:(NSString *)vaultId inContainer:(NSString *)containerName
                     success:(void(^)(id responseObject))success
                     failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure {
     
     CCBHTTPClient *client = [CCBHTTPClient sharedClient];
-    NSString *path = [NSString stringWithFormat:@"vault/data/%@/%@",containerName, vault_id];
+    NSString *path = [NSString stringWithFormat:@"vault/data/%@/%@",containerName, vaultId];
     [client GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         success(responseObject);
     } failure:failure];
 }
 
-- (void)deleteItemWithId:(NSString *)vault_id inContainer:(NSString *)containerName
+- (void)deleteItemWithId:(NSString *)vaultId inContainer:(NSString *)containerName
               success:(void(^)(id responseObject))success
               failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure {
     
-    NSString *path = [NSString stringWithFormat:@"vault/data/%@/%@",containerName, vault_id];
+    NSString *path = [NSString stringWithFormat:@"vault/data/%@/%@",containerName, vaultId];
     CCBHTTPClient *client = [CCBHTTPClient sharedClient];
     [client DELETE:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"Response after DELETE %@", responseObject);
         success(responseObject);
     } failure:failure];
 }
@@ -82,10 +78,8 @@
     NSString *path = [NSString stringWithFormat:@"vault/data/%@/%@", containerName, vault_id];
     CCBHTTPClient *client = [CCBHTTPClient sharedClient];
     [client PUT:path parameters:paramData success:^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"response after PUT %@", responseObject);
         success(responseObject);
     } failure:failure];
 }
-
 
 @end
