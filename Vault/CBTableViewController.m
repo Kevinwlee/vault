@@ -35,19 +35,19 @@
 }
 
 - (void)refresh {
-    CCBVaultProxy *proxy = [CCBVaultProxy sharedProxy];
-    [proxy getItemsInContainer:@"inventory" success:^(id responseObject) {
-        self.items = [NSMutableArray arrayWithArray:responseObject];
-        [self.tableView reloadData];
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"Error %@", error);
+    CCBVaultService *svc = [CCBVaultService sharedService];
+    [svc getItemsInContainerinContainer:@"inventory" completion:^(NSArray *carbonResponses, NSError *error) {
+        if (error) {
+            NSLog(@"error getting items");
+        } else {
+            self.items = [NSMutableArray arrayWithArray:carbonResponses];
+            [self.tableView reloadData];
+        }
     }];
-
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (NSDictionary *)itemAtIndexPath:(NSIndexPath *)indexPath {
