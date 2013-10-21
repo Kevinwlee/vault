@@ -76,6 +76,48 @@
 
 }
 
+- (void)deleteItem:(NSDictionary *)item completion:(vaultCompletionBlock)completionBlock {
+    
+    NSString *vaultId = [item objectForKey:@"id"];
+    if (!vaultId) {
+        [NSException raise:NSInvalidArgumentException format:@"the item must have the vault id"];
+    }
+    
+    NSString *container = [item objectForKey:@"container"];
+    if (!container) {
+        [NSException raise:NSInvalidArgumentException format:@"the item must have the container name"];
+    }
+    CCBVaultProxy *proxy = [self vaultProxy];
+    [proxy deleteItemWithId:vaultId inContainer:container success:^(id responseObject) {
+        [self executeVaultCompletionBlock:completionBlock withCarbonResponse:responseObject error:nil];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self executeVaultCompletionBlock:completionBlock withCarbonResponse:nil error:error];
+    }];
+}
+
+- (void)updateItem:(NSDictionary *)item completion:(vaultCompletionBlock)completionBlock {
+    if (!item) {
+        [NSException raise:NSInvalidArgumentException format:@"Item can't be nil"];
+    }
+    
+    NSString *vaultId = [item objectForKey:@"id"];
+    if (!vaultId) {
+        [NSException raise:NSInvalidArgumentException format:@"the item must have the vault id"];
+    }
+    
+    NSString *container = [item objectForKey:@"container"];
+    if (!container) {
+        [NSException raise:NSInvalidArgumentException format:@"the item must have the container name"];
+    }
+    
+    CCBVaultProxy *proxy = [self vaultProxy];
+    [proxy putItem:item inContainer:container success:^(id responseObject) {
+        [self executeVaultCompletionBlock:completionBlock withCarbonResponse:responseObject error:nil];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [self executeVaultCompletionBlock:completionBlock withCarbonResponse:nil error:error];
+    }];
+}
+
 //- (void)getContainersWithCompletion:(vaultListingCompletionBlock)completionBlock {
 //    [NSException raise:@"Not Implemented" format:@"Not implemented."];
 //}

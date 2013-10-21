@@ -84,4 +84,17 @@ executes the vaultCompletionBlock passing in the dictionary and error.
                  withCarbonResponse:(NSDictionary *)carbonResponse
                               error:(NSError *)error;
 
+/**
+ updates the item
+ @param item item to be updated;
+ @param completionBlock vaultCompletionBlock
+ */
+- (void)updateItem:(NSDictionary *)item completion:(vaultCompletionBlock)completionBlock;
+
+/**
+ deletes the item
+ @param item item to be deleted;
+ @param completionBlock vaultCompletionBlock
+ */
+- (void)deleteItem:(NSDictionary *)item completion:(vaultCompletionBlock)completionBlock;
 @end

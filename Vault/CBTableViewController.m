@@ -55,13 +55,13 @@
 }
 
 - (void)deleteItem:(NSDictionary *)item {
-    CCBVaultProxy *proxy = [CCBVaultProxy sharedProxy];
-    NSString *vault_id = [item objectForKey:@"id"];
-    NSLog(@"id %@", vault_id);
-    [proxy deleteItemWithId:vault_id inContainer:@"inventory" success:^(id responseObject) {
-        NSLog(@"Deleted");
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"Delete FAILED");
+    CCBVaultService *svc = [CCBVaultService sharedService];
+    [svc deleteItem:item completion:^(NSDictionary *carbonResponse, NSError *error) {
+        if (error) {
+            NSLog(@"error deleting item");
+        } else {
+            NSLog(@"deleted");
+        }
     }];
 }
 #pragma mark - Table view data source
