@@ -25,11 +25,11 @@ PODS:
   - Lockbox (1.4.3)
 
 DEPENDENCIES:
-  - CarbonBlack (from `https://github.com/chaione/carbon-black-ios`, branch `vault`)
+  - CarbonBlack (from `https://github.com/chaione/carbon-black-ios`, branch `vault-multi`)
 
 EXTERNAL SOURCES:
   CarbonBlack:
-    :branch: vault
+    :branch: vault-multi
     :git: https://github.com/chaione/carbon-black-ios
 
 SPEC CHECKSUMS:
@@ -37,4 +37,4 @@ SPEC CHECKSUMS:
   CarbonBlack: bbae85e36ca460e2aae00b99d0f1fc3c2856f8ce
   Lockbox: 1bcfd564f034b83456fcad5bdd49470a80a38d2b
 
-COCOAPODS: 0.19.1
+COCOAPODS: 0.26.2

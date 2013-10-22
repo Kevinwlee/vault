@@ -6,88 +6,43 @@
 	<dict>
 		<key>Pods-AFNetworking.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-CarbonBlack.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Lockbox.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0132658627E14CACB5B8F539</key>
+		<key>166A2E643CCC4E83B4A3E681</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1FC7181B96A9473E8EB7CE61</key>
+		<key>66E4A09F8CDE4523BED64A48</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F3E2A8CF3DA4363AB0DD52B</key>
+		<key>921088E46755401297F25E26</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5401726A04E64F1799DF3786</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>64FCB53B675747CFB3E3A8C1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>776D41E50DFF4C8889B8F936</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8E95FB86316B47DE83CA6B86</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>99562C572727454290DB89BE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A9B934C7D59A4903A292A4A3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CB144F5648374A99A049AC06</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D9215E926EFA4179A3F4858F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F570ECC9904F4FCF9A69D3EE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FB2D8BF7455841DBAABFEE24</key>
+		<key>B1963CF5B9994B1AB0B12A2A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

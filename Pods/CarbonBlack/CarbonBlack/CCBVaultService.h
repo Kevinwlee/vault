@@ -45,6 +45,11 @@ If you need to store data in the Carbon Vault, you will create the data in a con
 - (void)createItem:(NSDictionary *)item inContainer:(NSString *)containerName completion:(vaultCompletionBlock)completionBlock;
 
 /** 
+ NO DOCS YET
+ */
+- (void)createItem:(NSDictionary *)item withResources:(NSArray *) resources inContainer:(NSString *)containerName completion:(vaultCompletionBlock)completionBlock;
+
+/** 
 Used to retrieve the latest version of an item that is stored in the Carbon Vault.
  @param item custom data item with vault id
  @param completionBlock executed when api request completes.

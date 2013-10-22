@@ -96,10 +96,7 @@ static NSString * CCBSanitizedDeviceTokenStringWithDeviceToken(id deviceToken) {
 - (void)sendNotificationToDevices:(NSArray *)devices withMessage:(NSString *)message userInfo:(NSDictionary *)userInfo withCompletion:(void (^)(NSError *error))completion {
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    // add devices to param
-    for (NSString *device in devices) {
-        [params setObject:device forKey:@"device_ids[]"];
-    }
+    [params setObject:devices forKey:@"device_ids"];
     [params setObject:message forKey:@"message"];
     
     [[CCBNotificationProxy sharedProxy] requestNotificationWithParameters:params withSuccess:^(NSDictionary *response) {
@@ -123,12 +120,8 @@ static NSString * CCBSanitizedDeviceTokenStringWithDeviceToken(id deviceToken) {
 - (void)sendNotificationToAliases:(NSArray *)aliases withMessage:(NSString *)message userInfo:(NSDictionary *)userInfo withCompletion:(void (^)(NSError *error))completion {
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    // add devices to param
-    for (NSString *alias in aliases) {
-        [params setObject:alias forKey:@"aliases[]"];
-    }
+    [params setObject:aliases forKey:@"aliases"];
     [params setObject:message forKey:@"message"];
-    
     
     [[CCBNotificationProxy sharedProxy] requestNotificationWithParameters:params withSuccess:^(NSDictionary *response) {
         if (completion) {

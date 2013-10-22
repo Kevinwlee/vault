@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CCBHTTPClient.h"
+#import "CCBVaultResource.h"
 /**
  The CCBVaultProxy is a low level api for persiting data in the Carbon Vault.
  
@@ -33,6 +34,15 @@
      inContainer:(NSString *)containerName
          success:(void(^)(id responseObject))success
          failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure;
+
+/** 
+ 
+ */
+- (void)createItem:(NSDictionary *)item
+     withResources:(NSArray *)resources
+       inContainer:(NSString *)containerName
+           success:(void(^)(id responseObject))success
+           failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure;
 
 /**
  Gets all items in the container

@@ -41,6 +41,28 @@
     }];
 }
 
+- (void)createItem:(NSDictionary *)item withResources:(NSArray *) resources inContainer:(NSString *)containerName completion:(vaultCompletionBlock)completionBlock {
+    if (!item) {
+        [NSException raise:NSInvalidArgumentException format:@"Item cannot be nil"];
+    }
+    
+    if (!containerName) {
+        [NSException raise:NSInvalidArgumentException format:@"Container Name cannot be nil"];
+    }
+    
+    
+    
+    [self.vaultProxy createItem:item withResources:resources inContainer:containerName success:^(id responseObject) {
+        
+        [self executeVaultCompletionBlock:completionBlock withCarbonResponse:responseObject  error:nil];
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+        [self executeVaultCompletionBlock:completionBlock withCarbonResponse:nil error:error];
+        
+    }];
+}
+
 
 - (void)getItem:(NSDictionary *)item completion:(vaultCompletionBlock)completionBlock {
     

@@ -24,6 +24,7 @@
 		0AD1C84E1805B070001AFE09 /* CCBAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AD1C84D1805B070001AFE09 /* CCBAddItemViewController.m */; };
 		3DC15F9A180C90100009CFE6 /* CBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC15F99180C90100009CFE6 /* CBTableViewController.m */; };
 		3DC15F9D180C975E0009CFE6 /* CBEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC15F9C180C975E0009CFE6 /* CBEditViewController.m */; };
+		3DC15FA21815B46D0009CFE6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 3DC15FA11815B46D0009CFE6 /* Podfile */; };
 		F4DDA2F6ADE74A9EAC981451 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A94BD0C48BCE4317B22D36D8 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		3DC15F99180C90100009CFE6 /* CBTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBTableViewController.m; sourceTree = "<group>"; };
 		3DC15F9B180C975E0009CFE6 /* CBEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEditViewController.h; sourceTree = "<group>"; };
 		3DC15F9C180C975E0009CFE6 /* CBEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEditViewController.m; sourceTree = "<group>"; };
+		3DC15FA11815B46D0009CFE6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		A94BD0C48BCE4317B22D36D8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 				0AD1C8161805AA6A001AFE09 /* Frameworks */,
 				0AD1C8151805AA6A001AFE09 /* Products */,
 				16FD9BA084F74B25BFF5F907 /* Pods.xcconfig */,
+				3DC15FA11815B46D0009CFE6 /* Podfile */,
 			);
 			sourceTree = "<group>";
 		};
@@ -254,6 +257,7 @@
 			files = (
 				0AD1C8301805AA6A001AFE09 /* Images.xcassets in Resources */,
 				0AD1C8221805AA6A001AFE09 /* InfoPlist.strings in Resources */,
+				3DC15FA21815B46D0009CFE6 /* Podfile in Resources */,
 				0AD1C82B1805AA6A001AFE09 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

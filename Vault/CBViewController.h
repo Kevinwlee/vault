@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CCBVaultService.h"
 
-@interface CBViewController : UIViewController
+@interface CBViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *addPhotoTapped;
 
 @end

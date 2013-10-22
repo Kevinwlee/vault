@@ -82,4 +82,33 @@
     } failure:failure];
 }
 
+- (void)createItem:(NSDictionary *)item
+     withResources:(NSArray *)resources
+       inContainer:(NSString *)containerName
+           success:(void(^)(id responseObject))success
+           failure:(void(^)(NSURLSessionDataTask *task, NSError *error))failure {
+    
+    CCBHTTPClient *client = [CCBHTTPClient sharedClient];
+    
+    NSDictionary *params = @{@"data":item};
+    NSString *path = [NSString stringWithFormat:@"vault/data/%@.json",containerName];
+    
+    [client POST:path parameters:params constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        for (CCBVaultResource *resource in resources) {
+            [formData appendPartWithFileData:resource.data name:resource.name fileName:resource.fileName mimeType:resource.mimeType];
+        }
+        
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
+        if (success) {
+         success(responseObject);
+        }
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        if (failure) {
+         failure(task, error);
+        }
+    }];
+
+}
+
+
 @end
