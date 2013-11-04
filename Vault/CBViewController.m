@@ -42,11 +42,11 @@
     
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
     
-    NSData *resource = UIImageJPEGRepresentation(image, .8);
+    NSData *resource = UIImageJPEGRepresentation(image, .01);
     CCBVaultResource *vaultResource = [[CCBVaultResource alloc] initWithName:@"picture" fileName:@"picture.jpg" mimeType:@"image/jpeg" data:resource];
     
     CCBVaultService *svc = [CCBVaultService sharedService];
-    NSDictionary *otherData = @{@"name":@"kevin"};
+    NSDictionary *otherData = @{@"name":@"kevin", @"email":@"kevin@chaione.com", @"children":@[@"warren", @"kyle"]};
     
     [svc createItem:otherData withResources:@[vaultResource] inContainer:@"profile" completion:^(NSDictionary *carbonResponse, NSError *error) {
         if (error) {
